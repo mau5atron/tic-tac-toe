@@ -6,8 +6,11 @@ import './index.css';
 class Square extends React.Component{
 	render(){
 		return (
-			<button>
-				{}
+			<button className="square">
+				{/* passing in value from square value in Board class into square button press */}
+				{/*props allows data(values for each square) to be passed in*/}
+
+				{this.props.value}
 			</button>
 		);
 	}
@@ -16,12 +19,12 @@ class Square extends React.Component{
 // creates all the squares for the table
 class Board extends React.Component {
 	renderSquare(i){
-		return <Square />;
+		// added i value to pass data through square
+		return <Square value={i}/>;
 	}
 
 	render(){
 		const status = 'Next player: X';
-
 		return(
 			<div>
 				<div className="status">{status}</div>
