@@ -7,6 +7,10 @@ ol, ul {
   padding-left: 30px;
 }
 
+#root{
+  margin: auto;
+}
+
 .board-row:after {
   clear: both;
   content: "";
@@ -49,9 +53,22 @@ ol, ul {
 
 .game-info {
   margin-left: 20px;
-  margin: auto;
+  // margin: auto;
 }
 
 .game-board {
-  margin: auto;
+  // margin: auto;
+}
+
+li button{
+  border-radius: 5rem;
+  border: 1px solid green;
+  background: transparent;
+}
+
+@media screen and (max-width: 767px){
+  .square{
+    width: 5rem;
+    height: 5rem;
+  }
 }
